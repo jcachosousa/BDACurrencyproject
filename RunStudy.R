@@ -17,8 +17,8 @@ rm(list = ls( ))
 # (e.g. local_directory <- "C:/user/MyDocuments" )
 # type in the Console below help(getwd) and help(setwd) for more information
 #local_directory <- paste(getwd(),"CourseSessions/Sessions23", sep="/")
-local_directory <- paste(getwd(),"CurrenciesProject", sep="/")
-#local_directory <- "C:/Users/JMS/Documents/INSEADAnalytics/CurrenciesProject"
+local_directory <- paste(getwd(),"BDACurrencyproject", sep="/")
+#local_directory <- "C:/Users/JMS/Documents/BDACurrencyproject"
 
 cat("\n *********\n WORKING DIRECTORY IS ", local_directory, "\n PLEASE CHANGE IT IF IT IS NOT CORRECT using setwd(..) - type help(setwd) for more information \n *********")
 
