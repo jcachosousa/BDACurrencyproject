@@ -10,12 +10,12 @@ Currencies: Factor Analysis
 
 Business Decisions
 ---------------------------------------------------------
-Assuming I am a Global Potfolio Manager and have limited currency forwards available to hedge my portfolio, with the decomposition of principal components in currency price changes agaist USD I want to group countries in a way that my global portfolio could be more efficiently hedged with few currencies (around 4 in the example below). 
+Assuming I am a Global Potfolio Manager and have limited currency forwards available to hedge my portfolido, with the decomposition of principal components in currency price changes agaist USD I want to group countries in a way that my global portfolio could be more efficiently hedged with few currencies (around 4 in the example below). 
 
 
 The Data
 --------------------------------------------------------------
-We got from Bloomberg currency data for all the major currencies in the world against the USD in the last 30 days (short term)
+We got from Bloomberg currency data for all the major currencies in the world against the USD in the last 50 days (short term)
 
 ```{r echo=FALSE, message=FALSE, prompt=FALSE, results='asis'}
 # let's make the data into data.matrix classes so that we can easier visualize them
@@ -59,7 +59,7 @@ We did the following 6 step analysis, as suggested by the course:
 
 4. Develop a scree plot and decide on the number of factors to be derived
 
-5. Interpret the factors (consider factor rotations - technical but useful)
+5. Interpret the factors
 
 6. Save factor scores for subsequent analyses
 
@@ -124,7 +124,7 @@ As expected all variables have mean 0 and standard deviation 1.
 
 We decided to use the spot prices that are more sensitive to daily changes.
 
-This is the correlation matrix of the `r length(factor_attributes_used)` original variable we used for factor analysis (Note: this would be the same for the standardized ones if the standardization is done as above; there is a mathematical reason for this that we will not explore - you could confirm it yourself):
+This is the correlation matrix of the `r length(factor_attributes_used)` original variable we used for factor analysis 
 
 ```{r echo=FALSE, comment=NA, warning=FALSE, message=FALSE, results='asis'}
 thecor = round(cor(ProjectDataFactor),2)
@@ -180,7 +180,6 @@ print(Line, 'chart')
 ```
 
 
-your text...
 
 
 ```{r echo=FALSE, comment=NA, warning=FALSE,message=FALSE,results='asis'}
@@ -193,7 +192,6 @@ if (factor_selectionciterion == "manual")
 
 ```
 
-your text...
 
 #### 5. Interpret the factors 
 
@@ -278,7 +276,6 @@ if (factors_selected >=2){
 </div>
 <br> <br>
 
-Can you describe the observations using the new derived variables? How does each person perform for each of the selected factors?
 
 We now can replace our original data with the new ones and continue our analysis. For example, we can now visualize our original data using only the newly derived attributes. Here is the plot when we use only the top 2 factors:
 
@@ -309,4 +306,12 @@ if(ncol(NEW_ProjectData) >= 2) {
 Intepretation, Decisions and Conclusion
 ----------------------------------------------------------------
 
-YOUR TEXT HERE....
+There are seven currencies that have low or negative correlation to the USD, and therefore provide potential hedges. However, we need to match that with our initial intuition as some of these currencies have low correlation just because the dollar is rising and their internal economy is bad.  After all, a hedge would need to stop falling under certain conditions.
+
+The seven currencies are the Iraqi Dinar-IQD, Djiboutian Francs-DJF, Indian Rupees-INR, Japanese Yen-JPY, Qatari Riyal-QAR, Israeli New Shekel- INS and Argentinian Peso.
+
+We can remove IQD and DJF as hedges as quickly due to the high risk profile of the countries.  We can also dismiss the JPY as we know that Abemonomics is purposefully putting downward pressure on Yen.  We can dismiss Argentina as a hedge due to the high risk financial system and easily explained low correlation due to economic contraction.
+
+That leaves us with three interesting hedges.  The QAR and INS are both related geopolitically and it would seem benefit seem are affected in opposite ways by oil prices.  India is a fairly closed economy with a strong growth story due to its new government rather than exporting to credit fattened American consumers.
+
+As such we recommend using the QAR, INS and INR to hedge against our USD positions.

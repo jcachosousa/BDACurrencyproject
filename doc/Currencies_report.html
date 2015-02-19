@@ -207,15 +207,15 @@ hr {
 
 <h1>Currencies: Factor Analysis</h1>
 
-<p><strong>Pedro G, Felipe P, Jan S and Jorge C</strong></p>
+<p><strong>Pedro G, Felipe P, Jan S, Brian S and Jorge C</strong></p>
 
 <h2>Business Decisions</h2>
 
-<p>Assuming I am a Global Potfolio Manager and have limited currency forwards available to hedge my portfolio, with the decomposition of principal components in currency price changes agaist USD I want to group countries in a way that my global portfolio could be more efficiently hedged with few currencies (around 4 in the example below). </p>
+<p>Assuming I am a Global Potfolio Manager and have limited currency forwards available to hedge my portfolido, with the decomposition of principal components in currency price changes agaist USD I want to group countries in a way that my global portfolio could be more efficiently hedged with few currencies (around 4 in the example below). </p>
 
 <h2>The Data</h2>
 
-<p>We got from Bloomberg currency data for all the mjor currencies in the world against the USD in the last 30 days (short term)</p>
+<p>We got from Bloomberg currency data for all the major currencies in the world against the USD in the last 50 days (short term)</p>
 
 <p>This is how the first 50 data looks:
 <br></p>
@@ -223,14 +223,14 @@ hr {
 <div class="row">
 <div class="col-md-6">
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
-<!-- Thu Feb 19 13:06:38 2015 -->
+<!-- Thu Feb 19 15:09:24 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID1e683d2b7e34 () {
+function gvisDataTableID1e6847875c5 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1972,8 +1972,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID1e683d2b7e34() {
-var data = gvisDataTableID1e683d2b7e34();
+function drawChartTableID1e6847875c5() {
+var data = gvisDataTableID1e6847875c5();
 var options = {};
 options["allowHtml"] = true;
 options["showRowNumber"] = true;
@@ -1983,7 +1983,7 @@ options["allowHTML"] = true;
 options["page"] = "disable";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID1e683d2b7e34')
+    document.getElementById('TableID1e6847875c5')
     );
     chart.draw(data,options);
     
@@ -2007,9 +2007,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID1e683d2b7e34);
+callbacks.push(drawChartTableID1e6847875c5);
 })();
-function displayChartTableID1e683d2b7e34() {
+function displayChartTableID1e6847875c5() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2033,11 +2033,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e683d2b7e34"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e6847875c5"></script>
  
 <!-- divChart -->
   
-<div id="TableID1e683d2b7e34" 
+<div id="TableID1e6847875c5" 
   style="width: 1220; height: 400;">
 </div>
 
@@ -2047,7 +2047,7 @@ callbacks.shift()();
 
 <h2>Our Approach</h2>
 
-<p>We did the 6 step analysis as suggested by the course</p>
+<p>We did the following 6 step analysis, as suggested by the course:</p>
 
 <h4>Factor Analysis in 6 steps</h4>
 
@@ -2056,7 +2056,7 @@ callbacks.shift()();
 <li><p>Decide whether to scale or standardize the data</p></li>
 <li><p>Check the correlation matrix to see if Factor Analysis makes sense: apparently it does makes sense as the countries with highest eigenvalues in each factor are relatively different amongst each other</p></li>
 <li><p>Develop a scree plot and decide on the number of factors to be derived</p></li>
-<li><p>Interpret the factors (consider factor rotations - technical but useful)</p></li>
+<li><p>Interpret the factors</p></li>
 <li><p>Save factor scores for subsequent analyses</p></li>
 </ol>
 
@@ -2067,14 +2067,14 @@ callbacks.shift()();
 <div class="row">
 <div class="col-md-6">
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
-<!-- Thu Feb 19 13:06:38 2015 -->
+<!-- Thu Feb 19 15:09:25 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID1e685eff4b7f () {
+function gvisDataTableID1e68185f6e73 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2402,8 +2402,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID1e685eff4b7f() {
-var data = gvisDataTableID1e685eff4b7f();
+function drawChartTableID1e68185f6e73() {
+var data = gvisDataTableID1e68185f6e73();
 var options = {};
 options["allowHtml"] = true;
 options["showRowNumber"] = true;
@@ -2413,7 +2413,7 @@ options["allowHTML"] = true;
 options["page"] = "disable";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID1e685eff4b7f')
+    document.getElementById('TableID1e68185f6e73')
     );
     chart.draw(data,options);
     
@@ -2437,9 +2437,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID1e685eff4b7f);
+callbacks.push(drawChartTableID1e68185f6e73);
 })();
-function displayChartTableID1e685eff4b7f() {
+function displayChartTableID1e68185f6e73() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2463,11 +2463,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e685eff4b7f"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e68185f6e73"></script>
  
 <!-- divChart -->
   
-<div id="TableID1e685eff4b7f" 
+<div id="TableID1e68185f6e73" 
   style="width: 1220; height: 400;">
 </div>
 
@@ -2476,7 +2476,7 @@ callbacks.shift()();
 
 <h4>Step 2: Decide whether to scale or standardize the data</h4>
 
-<p>we used prices instead of returns </p>
+<p>We decided to use prices instead of returns </p>
 
 <pre><code class="r">ProjectDatafactor_scaled=apply(ProjectDataFactor,2, function(r) {if (sd(r)!=0) res=(r-mean(r))/sd(r) else res=0*r; res})
 </code></pre>
@@ -2488,14 +2488,14 @@ callbacks.shift()();
 <div class="row">
 <div class="col-md-6">
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
-<!-- Thu Feb 19 13:06:39 2015 -->
+<!-- Thu Feb 19 15:09:25 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID1e6827e8787f () {
+function gvisDataTableID1e684cfc3058 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2823,8 +2823,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID1e6827e8787f() {
-var data = gvisDataTableID1e6827e8787f();
+function drawChartTableID1e684cfc3058() {
+var data = gvisDataTableID1e684cfc3058();
 var options = {};
 options["allowHtml"] = true;
 options["showRowNumber"] = true;
@@ -2834,7 +2834,7 @@ options["allowHTML"] = true;
 options["page"] = "disable";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID1e6827e8787f')
+    document.getElementById('TableID1e684cfc3058')
     );
     chart.draw(data,options);
     
@@ -2858,9 +2858,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID1e6827e8787f);
+callbacks.push(drawChartTableID1e684cfc3058);
 })();
-function displayChartTableID1e6827e8787f() {
+function displayChartTableID1e684cfc3058() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2884,11 +2884,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e6827e8787f"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e684cfc3058"></script>
  
 <!-- divChart -->
   
-<div id="TableID1e6827e8787f" 
+<div id="TableID1e684cfc3058" 
   style="width: 1220; height: 400;">
 </div>
 
@@ -2900,9 +2900,9 @@ As expected all variables have mean 0 and standard deviation 1. </p>
 
 <h4>Step 3:  Check correlation matrix to see if Factor Analysis makes sense</h4>
 
-<p>we decided to use the spot prices that are more sensitive to daily changes</p>
+<p>We decided to use the spot prices that are more sensitive to daily changes.</p>
 
-<p>This is the correlation matrix of the 31 original variable we use for factor analysis (Note: this would be the same for the standardized ones if the standardization is done as above; there is a mathematical reason for this that we will not explore - you could confirm it yourself):</p>
+<p>This is the correlation matrix of the 31 original variable we used for factor analysis </p>
 
 <table border="1" class="data table table-bordered table-condensed">
   <thead class="thead">
@@ -4003,20 +4003,20 @@ As expected all variables have mean 0 and standard deviation 1. </p>
 
 <h4>Step 4. Develop a scree plot and decide on the number of factors to be derived</h4>
 
-<p>we assumed 4 currencies is a reasonable assumption for portfolio hedging</p>
+<p>We assumed that 4 currency factors is a reasonable assumption for portfolio hedging</p>
 
 <p><br></p>
 
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
 
-<!-- Thu Feb 19 13:06:42 2015 -->
+<!-- Thu Feb 19 15:09:28 2015 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID1e688aae9b () {
+function gvisDataTableID1e686fa412c1 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -4216,8 +4216,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID1e688aae9b() {
-var data = gvisDataTableID1e688aae9b();
+function drawChartTableID1e686fa412c1() {
+var data = gvisDataTableID1e686fa412c1();
 var options = {};
 options["allowHtml"] = true;
 options["width"] =   1200;
@@ -4233,7 +4233,7 @@ options["page"] = "disable";
   dataFormat3.format(data, 3);
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID1e688aae9b')
+    document.getElementById('TableID1e686fa412c1')
     );
     chart.draw(data,options);
     
@@ -4257,9 +4257,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID1e688aae9b);
+callbacks.push(drawChartTableID1e686fa412c1);
 })();
-function displayChartTableID1e688aae9b() {
+function displayChartTableID1e686fa412c1() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -4285,29 +4285,29 @@ callbacks.shift()();
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e688aae9b"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e686fa412c1"></script>
  
 
 <!-- divChart -->
 
-<div id="TableID1e688aae9b" 
+<div id="TableID1e686fa412c1" 
   style="width: 1200; height: 400;">
 </div>
 
 <p><br> <br></p>
 
-<p>your text&hellip;</p>
+<p>The scree plot below was used to visualize the data and help determine the number of relevant factors.</p>
 
 <!-- LineChart generated in R 3.1.2 by googleVis 0.5.8 package -->
 
-<!-- Thu Feb 19 13:06:43 2015 -->
+<!-- Thu Feb 19 15:09:29 2015 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataLineChartID1e681f1b5e50 () {
+function gvisDataLineChartID1e688993cec () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -4475,8 +4475,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartLineChartID1e681f1b5e50() {
-var data = gvisDataLineChartID1e681f1b5e50();
+function drawChartLineChartID1e688993cec() {
+var data = gvisDataLineChartID1e688993cec();
 var options = {};
 options["allowHtml"] = true;
 options["title"] = "Scree plot";
@@ -4488,7 +4488,7 @@ options["vAxes"] = [{title:'Eigenvalues'}];
 options["series"] = [{color:'green',pointSize:3, targetAxisIndex: 0}];
 
     var chart = new google.visualization.LineChart(
-    document.getElementById('LineChartID1e681f1b5e50')
+    document.getElementById('LineChartID1e688993cec')
     );
     chart.draw(data,options);
     
@@ -4512,9 +4512,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartLineChartID1e681f1b5e50);
+callbacks.push(drawChartLineChartID1e688993cec);
 })();
-function displayChartLineChartID1e681f1b5e50() {
+function displayChartLineChartID1e688993cec() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -4540,18 +4540,14 @@ callbacks.shift()();
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID1e681f1b5e50"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID1e688993cec"></script>
  
 
 <!-- divChart -->
 
-<div id="LineChartID1e681f1b5e50" 
+<div id="LineChartID1e688993cec" 
   style="width: 900; height: 600;">
 </div>
-
-<p>your text&hellip;</p>
-
-<p>your text&hellip;</p>
 
 <h4>5. Interpret the factors</h4>
 
@@ -4559,14 +4555,14 @@ callbacks.shift()();
 
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
 
-<!-- Thu Feb 19 13:06:44 2015 -->
+<!-- Thu Feb 19 15:09:29 2015 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID1e6833513650 () {
+function gvisDataTableID1e68764c2468 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -4798,8 +4794,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID1e6833513650() {
-var data = gvisDataTableID1e6833513650();
+function drawChartTableID1e68764c2468() {
+var data = gvisDataTableID1e68764c2468();
 var options = {};
 options["allowHtml"] = true;
 options["showRowNumber"] = true;
@@ -4809,7 +4805,7 @@ options["allowHTML"] = true;
 options["page"] = "disable";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID1e6833513650')
+    document.getElementById('TableID1e68764c2468')
     );
     chart.draw(data,options);
     
@@ -4833,9 +4829,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID1e6833513650);
+callbacks.push(drawChartTableID1e68764c2468);
 })();
-function displayChartTableID1e6833513650() {
+function displayChartTableID1e68764c2468() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -4861,12 +4857,12 @@ callbacks.shift()();
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e6833513650"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e68764c2468"></script>
  
 
 <!-- divChart -->
 
-<div id="TableID1e6833513650" 
+<div id="TableID1e68764c2468" 
   style="width: 1220; height: 400;">
 </div>
 
@@ -4876,14 +4872,14 @@ callbacks.shift()();
 
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
 
-<!-- Thu Feb 19 13:06:44 2015 -->
+<!-- Thu Feb 19 15:09:30 2015 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID1e6847e04cca () {
+function gvisDataTableID1e6855ae1fc5 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -5115,8 +5111,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID1e6847e04cca() {
-var data = gvisDataTableID1e6847e04cca();
+function drawChartTableID1e6855ae1fc5() {
+var data = gvisDataTableID1e6855ae1fc5();
 var options = {};
 options["allowHtml"] = true;
 options["showRowNumber"] = true;
@@ -5126,7 +5122,7 @@ options["allowHTML"] = true;
 options["page"] = "disable";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID1e6847e04cca')
+    document.getElementById('TableID1e6855ae1fc5')
     );
     chart.draw(data,options);
     
@@ -5150,9 +5146,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID1e6847e04cca);
+callbacks.push(drawChartTableID1e6855ae1fc5);
 })();
-function displayChartTableID1e6847e04cca() {
+function displayChartTableID1e6855ae1fc5() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -5178,12 +5174,12 @@ callbacks.shift()();
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e6847e04cca"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e6855ae1fc5"></script>
  
 
 <!-- divChart -->
 
-<div id="TableID1e6847e04cca" 
+<div id="TableID1e6855ae1fc5" 
   style="width: 1220; height: 400;">
 </div>
 
@@ -5201,14 +5197,14 @@ callbacks.shift()();
 <div class="col-md-6">
 
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
-<!-- Thu Feb 19 13:06:44 2015 -->
+<!-- Thu Feb 19 15:09:30 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID1e6856415a8e () {
+function gvisDataTableID1e68565a24e7 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -5573,8 +5569,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID1e6856415a8e() {
-var data = gvisDataTableID1e6856415a8e();
+function drawChartTableID1e68565a24e7() {
+var data = gvisDataTableID1e68565a24e7();
 var options = {};
 options["allowHtml"] = true;
 options["showRowNumber"] = true;
@@ -5584,7 +5580,7 @@ options["allowHTML"] = true;
 options["page"] = "disable";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID1e6856415a8e')
+    document.getElementById('TableID1e68565a24e7')
     );
     chart.draw(data,options);
     
@@ -5608,9 +5604,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID1e6856415a8e);
+callbacks.push(drawChartTableID1e68565a24e7);
 })();
-function displayChartTableID1e6856415a8e() {
+function displayChartTableID1e68565a24e7() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -5634,11 +5630,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e6856415a8e"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e68565a24e7"></script>
  
 <!-- divChart -->
   
-<div id="TableID1e6856415a8e" 
+<div id="TableID1e68565a24e7" 
   style="width: 1220; height: 400;">
 </div>
 
@@ -5646,20 +5642,18 @@ callbacks.shift()();
 </div>
 <br> <br></p>
 
-<p>Can you describe the observations using the new derived variables? How does each person perform for each of the selected factors?</p>
-
 <p>We now can replace our original data with the new ones and continue our analysis. For example, we can now visualize our original data using only the newly derived attributes. Here is the plot when we use only the top 2 factors:</p>
 
 <!-- ScatterChart generated in R 3.1.2 by googleVis 0.5.8 package -->
 
-<!-- Thu Feb 19 13:06:45 2015 -->
+<!-- Thu Feb 19 15:09:30 2015 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataScatterChartID1e6854332022 () {
+function gvisDataScatterChartID1e68214070c3 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -5919,8 +5913,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartScatterChartID1e6854332022() {
-var data = gvisDataScatterChartID1e6854332022();
+function drawChartScatterChartID1e68214070c3() {
+var data = gvisDataScatterChartID1e68214070c3();
 var options = {};
 options["allowHtml"] = true;
 options["legend"] = "none";
@@ -5934,7 +5928,7 @@ options["width"] =    900;
 options["height"] =    800;
 
     var chart = new google.visualization.ScatterChart(
-    document.getElementById('ScatterChartID1e6854332022')
+    document.getElementById('ScatterChartID1e68214070c3')
     );
     chart.draw(data,options);
     
@@ -5958,9 +5952,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartScatterChartID1e6854332022);
+callbacks.push(drawChartScatterChartID1e68214070c3);
 })();
-function displayChartScatterChartID1e6854332022() {
+function displayChartScatterChartID1e68214070c3() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -5986,18 +5980,26 @@ callbacks.shift()();
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartScatterChartID1e6854332022"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartScatterChartID1e68214070c3"></script>
  
 
 <!-- divChart -->
 
-<div id="ScatterChartID1e6854332022" 
+<div id="ScatterChartID1e68214070c3" 
   style="width: 900; height: 800;">
 </div>
 
 <h2>Intepretation, Decisions and Conclusion</h2>
 
-<p>YOUR TEXT HERE&hellip;.</p>
+<p>There are seven currencies that have low or negative correlation to the USD, and therefore provide potential hedges. However, we need to match that with our initial intuition as some of these currencies have low correlation just because the dollar is rising and their internal economy is bad.  After all, a hedge would need to stop falling under certain conditions.</p>
+
+<p>The seven currencies are the Iraqi Dinar-IQD, Djiboutian Francs-DJF, Indian Rupees-INR, Japanese Yen-JPY, Qatari Riyal-QAR, Israeli New Shekel- INS and Argentinian Peso.</p>
+
+<p>We can remove IQD and DJF as hedges as quickly due to the high risk profile of the countries.  We can also dismiss the JPY as we know that Abemonomics is purposefully putting downward pressure on Yen.  We can dismiss Argentina as a hedge due to the high risk financial system and easily explained low correlation due to economic contraction.</p>
+
+<p>That leaves us with three interesting hedges.  The QAR and INS are both related geopolitically and it would seem benefit seem are affected in opposite ways by oil prices.  India is a fairly closed economy with a strong growth story due to its new government rather than exporting to credit fattened American consumers.</p>
+
+<p>As such we recommend using the QAR, INS and INR to hedge against our USD positions.</p>
 
 </body>
 
