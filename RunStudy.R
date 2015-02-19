@@ -8,7 +8,6 @@
 # Project Name: "Currencies Project: "Dimensionality Reduction and Derived Attributes"
 
 rm(list = ls( ))
-
 ######################################################################
 
 # THESE ARE THE PROJECT PARAMETERS NEEDED TO GENERATE THE REPORT
