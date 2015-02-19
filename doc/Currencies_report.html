@@ -207,15 +207,15 @@ hr {
 
 <h1>Currencies: Factor Analysis</h1>
 
-<p><strong>Team names</strong></p>
+<p><strong>Pedro G, Felipe P, Jan S and Jorge C</strong></p>
 
 <h2>Business Decisions</h2>
 
-<p>your text&hellip;</p>
+<p>Assuming I am a Global Potfolio Manager and have limited currency forwards available to hedge my portfolio, with the decomposition of principal components in currency price changes agaist USD I want to group countries in a way that my global portfolio could be more efficiently hedged with few currencies (around 4 in the example below). </p>
 
 <h2>The Data</h2>
 
-<p>your text&hellip;</p>
+<p>We got from Bloomberg currency data for all the mjor currencies in the world against the USD in the last 30 days (short term)</p>
 
 <p>This is how the first 50 data looks:
 <br></p>
@@ -223,14 +223,14 @@ hr {
 <div class="row">
 <div class="col-md-6">
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
-<!-- Wed Feb 18 02:24:41 2015 -->
+<!-- Thu Feb 19 13:06:38 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID16ac4e8975ee () {
+function gvisDataTableID1e683d2b7e34 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1972,8 +1972,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID16ac4e8975ee() {
-var data = gvisDataTableID16ac4e8975ee();
+function drawChartTableID1e683d2b7e34() {
+var data = gvisDataTableID1e683d2b7e34();
 var options = {};
 options["allowHtml"] = true;
 options["showRowNumber"] = true;
@@ -1983,7 +1983,7 @@ options["allowHTML"] = true;
 options["page"] = "disable";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID16ac4e8975ee')
+    document.getElementById('TableID1e683d2b7e34')
     );
     chart.draw(data,options);
     
@@ -2007,9 +2007,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID16ac4e8975ee);
+callbacks.push(drawChartTableID1e683d2b7e34);
 })();
-function displayChartTableID16ac4e8975ee() {
+function displayChartTableID1e683d2b7e34() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2033,11 +2033,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID16ac4e8975ee"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e683d2b7e34"></script>
  
 <!-- divChart -->
   
-<div id="TableID16ac4e8975ee" 
+<div id="TableID1e683d2b7e34" 
   style="width: 1220; height: 400;">
 </div>
 
@@ -2047,12 +2047,14 @@ callbacks.shift()();
 
 <h2>Our Approach</h2>
 
+<p>We did the 6 step analysis as suggested by the course</p>
+
 <h4>Factor Analysis in 6 steps</h4>
 
 <ol>
-<li><p>Confirm the data in metric </p></li>
+<li><p>Confirm the data is metric</p></li>
 <li><p>Decide whether to scale or standardize the data</p></li>
-<li><p>Check the correlation matrix to see if Factor Analysis makes sense</p></li>
+<li><p>Check the correlation matrix to see if Factor Analysis makes sense: apparently it does makes sense as the countries with highest eigenvalues in each factor are relatively different amongst each other</p></li>
 <li><p>Develop a scree plot and decide on the number of factors to be derived</p></li>
 <li><p>Interpret the factors (consider factor rotations - technical but useful)</p></li>
 <li><p>Save factor scores for subsequent analyses</p></li>
@@ -2065,14 +2067,14 @@ callbacks.shift()();
 <div class="row">
 <div class="col-md-6">
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
-<!-- Wed Feb 18 02:24:42 2015 -->
+<!-- Thu Feb 19 13:06:38 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID16aca126691 () {
+function gvisDataTableID1e685eff4b7f () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2400,8 +2402,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID16aca126691() {
-var data = gvisDataTableID16aca126691();
+function drawChartTableID1e685eff4b7f() {
+var data = gvisDataTableID1e685eff4b7f();
 var options = {};
 options["allowHtml"] = true;
 options["showRowNumber"] = true;
@@ -2411,7 +2413,7 @@ options["allowHTML"] = true;
 options["page"] = "disable";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID16aca126691')
+    document.getElementById('TableID1e685eff4b7f')
     );
     chart.draw(data,options);
     
@@ -2435,9 +2437,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID16aca126691);
+callbacks.push(drawChartTableID1e685eff4b7f);
 })();
-function displayChartTableID16aca126691() {
+function displayChartTableID1e685eff4b7f() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2461,11 +2463,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID16aca126691"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e685eff4b7f"></script>
  
 <!-- divChart -->
   
-<div id="TableID16aca126691" 
+<div id="TableID1e685eff4b7f" 
   style="width: 1220; height: 400;">
 </div>
 
@@ -2474,7 +2476,7 @@ callbacks.shift()();
 
 <h4>Step 2: Decide whether to scale or standardize the data</h4>
 
-<p>your text&hellip;</p>
+<p>we used prices instead of returns </p>
 
 <pre><code class="r">ProjectDatafactor_scaled=apply(ProjectDataFactor,2, function(r) {if (sd(r)!=0) res=(r-mean(r))/sd(r) else res=0*r; res})
 </code></pre>
@@ -2486,14 +2488,14 @@ callbacks.shift()();
 <div class="row">
 <div class="col-md-6">
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
-<!-- Wed Feb 18 02:24:43 2015 -->
+<!-- Thu Feb 19 13:06:39 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID16ac71734800 () {
+function gvisDataTableID1e6827e8787f () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2821,8 +2823,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID16ac71734800() {
-var data = gvisDataTableID16ac71734800();
+function drawChartTableID1e6827e8787f() {
+var data = gvisDataTableID1e6827e8787f();
 var options = {};
 options["allowHtml"] = true;
 options["showRowNumber"] = true;
@@ -2832,7 +2834,7 @@ options["allowHTML"] = true;
 options["page"] = "disable";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID16ac71734800')
+    document.getElementById('TableID1e6827e8787f')
     );
     chart.draw(data,options);
     
@@ -2856,9 +2858,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID16ac71734800);
+callbacks.push(drawChartTableID1e6827e8787f);
 })();
-function displayChartTableID16ac71734800() {
+function displayChartTableID1e6827e8787f() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2882,11 +2884,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID16ac71734800"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e6827e8787f"></script>
  
 <!-- divChart -->
   
-<div id="TableID16ac71734800" 
+<div id="TableID1e6827e8787f" 
   style="width: 1220; height: 400;">
 </div>
 
@@ -2898,7 +2900,7 @@ As expected all variables have mean 0 and standard deviation 1. </p>
 
 <h4>Step 3:  Check correlation matrix to see if Factor Analysis makes sense</h4>
 
-<p>your text&hellip;</p>
+<p>we decided to use the spot prices that are more sensitive to daily changes</p>
 
 <p>This is the correlation matrix of the 31 original variable we use for factor analysis (Note: this would be the same for the standardized ones if the standardization is done as above; there is a mathematical reason for this that we will not explore - you could confirm it yourself):</p>
 
@@ -3997,24 +3999,24 @@ As expected all variables have mean 0 and standard deviation 1. </p>
   </tbody>
 </table>
 
-<p>your text&hellip;</p>
+<p>Apparently the factors are independent and can have jointly a good explanation power.</p>
 
 <h4>Step 4. Develop a scree plot and decide on the number of factors to be derived</h4>
 
-<p>your text&hellip;</p>
+<p>we assumed 4 currencies is a reasonable assumption for portfolio hedging</p>
 
 <p><br></p>
 
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
 
-<!-- Wed Feb 18 02:24:47 2015 -->
+<!-- Thu Feb 19 13:06:42 2015 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID16ac4d3af6d () {
+function gvisDataTableID1e688aae9b () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -4214,8 +4216,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableID16ac4d3af6d() {
-var data = gvisDataTableID16ac4d3af6d();
+function drawChartTableID1e688aae9b() {
+var data = gvisDataTableID1e688aae9b();
 var options = {};
 options["allowHtml"] = true;
 options["width"] =   1200;
@@ -4231,7 +4233,7 @@ options["page"] = "disable";
   dataFormat3.format(data, 3);
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID16ac4d3af6d')
+    document.getElementById('TableID1e688aae9b')
     );
     chart.draw(data,options);
     
@@ -4255,9 +4257,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID16ac4d3af6d);
+callbacks.push(drawChartTableID1e688aae9b);
 })();
-function displayChartTableID16ac4d3af6d() {
+function displayChartTableID1e688aae9b() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -4283,12 +4285,12 @@ callbacks.shift()();
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID16ac4d3af6d"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e688aae9b"></script>
  
 
 <!-- divChart -->
 
-<div id="TableID16ac4d3af6d" 
+<div id="TableID1e688aae9b" 
   style="width: 1200; height: 400;">
 </div>
 
@@ -4298,14 +4300,14 @@ callbacks.shift()();
 
 <!-- LineChart generated in R 3.1.2 by googleVis 0.5.8 package -->
 
-<!-- Wed Feb 18 02:24:47 2015 -->
+<!-- Thu Feb 19 13:06:43 2015 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataLineChartID16acd2d1890 () {
+function gvisDataLineChartID1e681f1b5e50 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -4473,8 +4475,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartLineChartID16acd2d1890() {
-var data = gvisDataLineChartID16acd2d1890();
+function drawChartLineChartID1e681f1b5e50() {
+var data = gvisDataLineChartID1e681f1b5e50();
 var options = {};
 options["allowHtml"] = true;
 options["title"] = "Scree plot";
@@ -4486,7 +4488,7 @@ options["vAxes"] = [{title:'Eigenvalues'}];
 options["series"] = [{color:'green',pointSize:3, targetAxisIndex: 0}];
 
     var chart = new google.visualization.LineChart(
-    document.getElementById('LineChartID16acd2d1890')
+    document.getElementById('LineChartID1e681f1b5e50')
     );
     chart.draw(data,options);
     
@@ -4510,9 +4512,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartLineChartID16acd2d1890);
+callbacks.push(drawChartLineChartID1e681f1b5e50);
 })();
-function displayChartLineChartID16acd2d1890() {
+function displayChartLineChartID1e681f1b5e50() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -4538,12 +4540,12 @@ callbacks.shift()();
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID16acd2d1890"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID1e681f1b5e50"></script>
  
 
 <!-- divChart -->
 
-<div id="LineChartID16acd2d1890" 
+<div id="LineChartID1e681f1b5e50" 
   style="width: 900; height: 600;">
 </div>
 
@@ -4553,330 +4555,237 @@ callbacks.shift()();
 
 <h4>5. Interpret the factors</h4>
 
-<p>For our data, the 7 selected factors look as follows after the varimax rotation: </p>
+<p>For our data, the 4 selected factors look as follows after the varimax rotation: </p>
 
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
 
-<!-- Wed Feb 18 02:24:48 2015 -->
+<!-- Thu Feb 19 13:06:44 2015 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID16ac2966bee () {
+function gvisDataTableID1e6833513650 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
  [
- "BGN",
-0.98,
-0,
--0.11,
-0.02,
-0.04,
--0.05,
--0.05 
-],
-[
- "EUR",
-0.98,
-0.02,
--0.1,
--0.02,
-0.02,
--0.05,
--0.08 
-],
-[
- "SEK",
-0.97,
-0.19,
--0.04,
-0,
-0.06,
--0.05,
--0.06 
-],
-[
  "CAD",
 0.97,
-0.05,
--0.04,
-0.14,
-0.08,
--0.13,
--0.04 
-],
-[
- "ISK",
-0.95,
-0.12,
--0.21,
--0.08,
-0.03,
--0.04,
--0.06 
-],
-[
- "SGD",
-0.94,
-0.18,
--0.03,
-0.1,
-0.1,
-0.06,
--0.03 
+0.02,
+0.16,
+0.04 
 ],
 [
  "PEN",
-0.93,
-0.2,
-0.13,
-0.18,
-0.06,
--0.08,
-0 
+0.96,
+0.17,
+0,
+0.14 
 ],
 [
- "UZS",
-0.93,
-0.24,
-0.15,
-0.15,
-0.12,
+ "BGN",
+0.96,
 -0.01,
+0.21,
 -0.04 
 ],
 [
+ "SEK",
+0.96,
+0.18,
+0.15,
+-0.03 
+],
+[
+ "UZS",
+0.95,
+0.23,
+0.04,
+0.16 
+],
+[
+ "EUR",
+0.95,
+0,
+0.2,
+-0.08 
+],
+[
+ "SGD",
+0.93,
+0.18,
+0.17,
+0.1 
+],
+[
  "DZD",
+0.92,
+-0.01,
+0.06,
+0.31 
+],
+[
+ "ISK",
 0.91,
-0.01,
-0.13,
-0.31,
-0.09,
-0.02,
--0.07 
+0.11,
+0.28,
+-0.15 
 ],
 [
  "UGX",
 0.89,
--0.01,
-0.02,
--0.27,
-0.11,
--0.25,
--0.06 
+-0.02,
+0.1,
+-0.3 
 ],
 [
  "AUD",
-0.86,
-0.32,
-0.03,
-0.29,
-0.18,
-0,
--0.03 
-],
-[
- "GBP",
-0.84,
+0.88,
+0.3,
 0.16,
--0.29,
--0.28,
-0,
--0.07,
--0.07 
+0.26 
 ],
 [
  "TRY",
-0.82,
-0.25,
-0.2,
-0.35,
-0.12,
--0.08,
--0.02 
-],
-[
- "CNY",
-0.8,
-0.46,
--0.07,
-0.24,
-0.19,
--0.03,
--0.09 
+0.87,
+0.21,
+-0.02,
+0.31 
 ],
 [
  "RUB",
+0.82,
+0.26,
+0.28,
+-0.15 
+],
+[
+ "CNY",
+0.81,
+0.43,
+0.24,
+0.18 
+],
+[
+ "GBP",
 0.79,
-0.27,
--0.12,
--0.03,
-0.35,
--0.3,
-0.05 
+0.16,
+0.31,
+-0.35 
 ],
 [
  "UYU",
-0.74,
-0.39,
-0.12,
--0.23,
--0.12,
--0.13,
-0.06 
+0.75,
+0.36,
+-0.14,
+-0.26 
 ],
 [
  "BWP",
-0.73,
-0.61,
--0.07,
-0.05,
-0.19,
--0.06,
-0.06 
+0.74,
+0.6,
+0.17,
+-0.01 
 ],
 [
  "IDR",
-0.7,
-0.57,
-0.14,
--0.11,
-0.21,
--0.07,
-0.04 
+0.72,
+0.59,
+0.01,
+-0.06 
 ],
 [
  "PGK",
-0.69,
--0.13,
-0.2,
-0.01,
-0.2,
-0.16,
-0.28 
-],
-[
- "MXN",
-0.61,
-0.65,
--0.03,
-0.16,
-0.33,
-0.01,
-0.09 
+0.68,
+-0.05,
+-0.06,
+0.15 
 ],
 [
  "UAH",
-0.59,
-0,
+0.64,
+0.02,
+-0.43,
+0.49 
+],
+[
+ "MXN",
+0.63,
 0.67,
-0.25,
-0.03,
-0.18,
--0.02 
+0.2,
+0.16 
 ],
 [
  "BRL",
-0.53,
+0.58,
 0.57,
-0.54,
-0.16,
--0.03,
-0.15,
-0.04 
-],
-[
- "SAR",
-0.45,
-0.07,
--0.78,
-0.09,
-0.02,
--0.08,
--0.21 
+-0.4,
+0.33 
 ],
 [
  "TWD",
-0.42,
-0.79,
--0.06,
--0.25,
+0.4,
+0.81,
 0.1,
-0.08,
-0 
+-0.19 
+],
+[
+ "SAR",
+0.38,
+0.01,
+0.73,
+-0.19 
 ],
 [
  "ARS",
-0.22,
-0.25,
--0.06,
-0.1,
-0.86,
-0.02,
--0.2 
+0.24,
+0.33,
+0.56,
+0.29 
 ],
 [
  "QAR",
-0.13,
-0.04,
-0.11,
-0.81,
-0.02,
-0.15,
-0.09 
+0.17,
+0,
+-0.04,
+0.72 
 ],
 [
  "ILS",
-0.09,
-0.11,
--0.65,
--0.25,
-0.55,
+-0.01,
 0.24,
-0.13 
-],
-[
- "IQD",
--0.1,
--0.88,
-0.12,
--0.24,
--0.15,
-0.02,
--0.03 
+0.77,
+-0.17 
 ],
 [
  "DJF",
--0.12,
-0.05,
-0.07,
+-0.09,
 0.09,
--0.12,
--0.08,
-0.94 
+-0.44,
+-0.1 
 ],
 [
- "JPY",
--0.23,
-0.25,
-0.07,
-0.2,
-0.07,
-0.87,
--0.09 
+ "IQD",
+-0.13,
+-0.85,
+-0.14,
+-0.15 
 ],
 [
  "INR",
--0.27,
-0.84,
-0.05,
+-0.29,
+0.87,
 -0.07,
--0.05,
-0.35,
--0.06 
+0.1 
+],
+[
+ "JPY",
+-0.32,
+0.37,
+0.08,
+0.6 
 ] 
 ];
 data.addColumn('string','Variables');
@@ -4884,16 +4793,13 @@ data.addColumn('number','Component 1');
 data.addColumn('number','Component 2');
 data.addColumn('number','Component 3');
 data.addColumn('number','Component 4');
-data.addColumn('number','Component 5');
-data.addColumn('number','Component 6');
-data.addColumn('number','Component 7');
 data.addRows(datajson);
 return(data);
 }
  
 // jsDrawChart
-function drawChartTableID16ac2966bee() {
-var data = gvisDataTableID16ac2966bee();
+function drawChartTableID1e6833513650() {
+var data = gvisDataTableID1e6833513650();
 var options = {};
 options["allowHtml"] = true;
 options["showRowNumber"] = true;
@@ -4903,7 +4809,7 @@ options["allowHTML"] = true;
 options["page"] = "disable";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID16ac2966bee')
+    document.getElementById('TableID1e6833513650')
     );
     chart.draw(data,options);
     
@@ -4927,9 +4833,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID16ac2966bee);
+callbacks.push(drawChartTableID1e6833513650);
 })();
-function displayChartTableID16ac2966bee() {
+function displayChartTableID1e6833513650() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -4955,12 +4861,12 @@ callbacks.shift()();
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID16ac2966bee"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e6833513650"></script>
  
 
 <!-- divChart -->
 
-<div id="TableID16ac2966bee" 
+<div id="TableID1e6833513650" 
   style="width: 1220; height: 400;">
 </div>
 
@@ -4970,103 +4876,76 @@ callbacks.shift()();
 
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
 
-<!-- Wed Feb 18 02:24:49 2015 -->
+<!-- Thu Feb 19 13:06:44 2015 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID16ac67762ae8 () {
+function gvisDataTableID1e6847e04cca () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
  [
- "BGN",
-0.98,
-null,
-null,
-null,
-null,
-null,
-null 
-],
-[
- "EUR",
-0.98,
-null,
-null,
-null,
-null,
-null,
-null 
-],
-[
- "SEK",
-0.97,
-null,
-null,
-null,
-null,
-null,
-null 
-],
-[
  "CAD",
 0.97,
-null,
-null,
-null,
-null,
-null,
-null 
-],
-[
- "ISK",
-0.95,
-null,
-null,
-null,
-null,
-null,
-null 
-],
-[
- "SGD",
-0.94,
-null,
-null,
-null,
 null,
 null,
 null 
 ],
 [
  "PEN",
-0.93,
+0.96,
 null,
 null,
+null 
+],
+[
+ "BGN",
+0.96,
 null,
+null,
+null 
+],
+[
+ "SEK",
+0.96,
 null,
 null,
 null 
 ],
 [
  "UZS",
+0.95,
+null,
+null,
+null 
+],
+[
+ "EUR",
+0.95,
+null,
+null,
+null 
+],
+[
+ "SGD",
 0.93,
-null,
-null,
-null,
 null,
 null,
 null 
 ],
 [
  "DZD",
+0.92,
+null,
+null,
+null 
+],
+[
+ "ISK",
 0.91,
-null,
-null,
-null,
 null,
 null,
 null 
@@ -5076,128 +4955,96 @@ null
 0.89,
 null,
 null,
-null,
-null,
-null,
 null 
 ],
 [
  "AUD",
-0.86,
-null,
-null,
-null,
-null,
-null,
-null 
-],
-[
- "GBP",
-0.84,
-null,
-null,
-null,
+0.88,
 null,
 null,
 null 
 ],
 [
  "TRY",
-0.82,
-null,
-null,
-null,
-null,
-null,
-null 
-],
-[
- "CNY",
-0.8,
-null,
-null,
-null,
+0.87,
 null,
 null,
 null 
 ],
 [
  "RUB",
+0.82,
+null,
+null,
+null 
+],
+[
+ "CNY",
+0.81,
+null,
+null,
+null 
+],
+[
+ "GBP",
 0.79,
-null,
-null,
-null,
 null,
 null,
 null 
 ],
 [
  "UYU",
-0.74,
-null,
-null,
-null,
+0.75,
 null,
 null,
 null 
 ],
 [
  "BWP",
-0.73,
-0.61,
-null,
-null,
-null,
+0.74,
+0.6,
 null,
 null 
 ],
 [
  "IDR",
-0.7,
-0.57,
-null,
-null,
-null,
+0.72,
+0.59,
 null,
 null 
 ],
 [
  "PGK",
-0.69,
-null,
-null,
-null,
-null,
-null,
-null 
-],
-[
- "MXN",
-0.61,
-0.65,
-null,
-null,
+0.68,
 null,
 null,
 null 
 ],
 [
  "UAH",
-0.59,
-null,
-0.67,
-null,
+0.64,
 null,
 null,
 null 
 ],
 [
+ "MXN",
+0.63,
+0.67,
+null,
+null 
+],
+[
  "BRL",
-0.53,
+0.58,
 0.57,
-0.54,
 null,
+null 
+],
+[
+ "TWD",
 null,
+0.81,
 null,
 null 
 ],
@@ -5205,30 +5052,14 @@ null
  "SAR",
 null,
 null,
--0.78,
-null,
-null,
-null,
-null 
-],
-[
- "TWD",
-null,
-0.79,
-null,
-null,
-null,
-null,
+0.73,
 null 
 ],
 [
  "ARS",
 null,
 null,
-null,
-null,
-0.86,
-null,
+0.56,
 null 
 ],
 [
@@ -5236,29 +5067,13 @@ null
 null,
 null,
 null,
-0.81,
-null,
-null,
-null 
+0.72 
 ],
 [
  "ILS",
 null,
 null,
--0.65,
-null,
-0.55,
-null,
-null 
-],
-[
- "IQD",
-null,
--0.88,
-null,
-null,
-null,
-null,
+0.77,
 null 
 ],
 [
@@ -5266,30 +5081,28 @@ null
 null,
 null,
 null,
+null 
+],
+[
+ "IQD",
 null,
+-0.85,
 null,
+null 
+],
+[
+ "INR",
 null,
-0.94 
+0.87,
+null,
+null 
 ],
 [
  "JPY",
 null,
 null,
 null,
-null,
-null,
-0.87,
-null 
-],
-[
- "INR",
-null,
-0.84,
-null,
-null,
-null,
-null,
-null 
+0.6 
 ] 
 ];
 data.addColumn('string','Variables');
@@ -5297,16 +5110,13 @@ data.addColumn('number','Component 1');
 data.addColumn('number','Component 2');
 data.addColumn('number','Component 3');
 data.addColumn('number','Component 4');
-data.addColumn('number','Component 5');
-data.addColumn('number','Component 6');
-data.addColumn('number','Component 7');
 data.addRows(datajson);
 return(data);
 }
  
 // jsDrawChart
-function drawChartTableID16ac67762ae8() {
-var data = gvisDataTableID16ac67762ae8();
+function drawChartTableID1e6847e04cca() {
+var data = gvisDataTableID1e6847e04cca();
 var options = {};
 options["allowHtml"] = true;
 options["showRowNumber"] = true;
@@ -5316,7 +5126,7 @@ options["allowHTML"] = true;
 options["page"] = "disable";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID16ac67762ae8')
+    document.getElementById('TableID1e6847e04cca')
     );
     chart.draw(data,options);
     
@@ -5340,9 +5150,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID16ac67762ae8);
+callbacks.push(drawChartTableID1e6847e04cca);
 })();
-function displayChartTableID16ac67762ae8() {
+function displayChartTableID1e6847e04cca() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -5368,12 +5178,12 @@ callbacks.shift()();
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID16ac67762ae8"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e6847e04cca"></script>
  
 
 <!-- divChart -->
 
-<div id="TableID16ac67762ae8" 
+<div id="TableID1e6847e04cca" 
   style="width: 1220; height: 400;">
 </div>
 
@@ -5381,7 +5191,7 @@ callbacks.shift()();
 
 <p>How would you interpret the selected factors?</p>
 
-<p>YOUR TEXT: INTERPRETATIONS AND ARGUMENTS FOR YOUR CHOICES..</p>
+<p>Canada, Israel, India and Qatar have very different characteristics. Probably these economies have links with countries around them that allow for very different currency fluctuations compared to the USD.</p>
 
 <h4>Step 6. Save factor scores for subsequent analyses</h4>
 
@@ -5391,516 +5201,366 @@ callbacks.shift()();
 <div class="col-md-6">
 
 <!-- Table generated in R 3.1.2 by googleVis 0.5.8 package -->
-<!-- Wed Feb 18 02:24:49 2015 -->
+<!-- Thu Feb 19 13:06:44 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableID16ac85850e3 () {
+function gvisDataTableID1e6856415a8e () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
  [
  "1",
--0.82,
--1.08,
-0.42,
--0.48,
--3.85,
--0.04,
-0.96 
+-0.91,
+-1.44,
+-2.63,
+-1.28 
 ],
 [
  "2",
--0.96,
--1,
-0.27,
--0.27,
--3.88,
--0.51,
-0.64 
+-0.98,
+-1.5,
+-2.48,
+-1.34 
 ],
 [
  "3",
--0.81,
--1.21,
-0.15,
--0.5,
--3.61,
-0.27,
-1 
+-0.97,
+-1.49,
+-2.27,
+-1.18 
 ],
 [
  "4",
--1.26,
--1.35,
-0.82,
-0.44,
--0.3,
--0.53,
--1.45 
+-1.1,
+-1.57,
+-0.43,
+0.54 
 ],
 [
  "5",
--1.42,
--1.4,
-0.5,
-0.76,
--0.19,
--1,
--0.69 
+-1.2,
+-1.65,
+-0.42,
+0.41 
 ],
 [
  "6",
--1.45,
--1.44,
-0.63,
-0.61,
-0.19,
--0.91,
--1.55 
+-1.23,
+-1.67,
+-0.06,
+0.58 
 ],
 [
  "7",
--1.29,
--1.58,
-0.54,
--0.43,
-0.53,
--0.18,
--1.49 
+-1.24,
+-1.56,
+0.22,
+0.15 
 ],
 [
  "8",
--1.21,
--1.47,
-0.06,
--0.15,
-0.44,
--0.4,
-0.45 
+-1.16,
+-1.37,
+-0.07,
+-0.16 
 ],
 [
  "9",
--1.1,
--1.48,
--0.05,
--0.38,
-0.85,
-0.52,
--1.14 
+-1.21,
+-1.29,
+0.83,
+0.36 
 ],
 [
  "10",
--0.88,
--1.42,
-0.11,
--1.73,
-1.42,
-1.49,
--0.71 
+-1.17,
+-0.85,
+0.93,
+-0.12 
 ],
 [
  "11",
--0.83,
--1.26,
--0.36,
--0.7,
-1.01,
-1.33,
-1.21 
+-1.09,
+-0.72,
+0.5,
+0.1 
 ],
 [
  "12",
--0.67,
--1.27,
--0.15,
--0.73,
-0.75,
-2.37,
--0.74 
-],
-[
- "13",
--0.77,
--1.46,
--0.8,
-0.7,
-1.3,
-2.03,
-1.29 
-],
-[
- "14",
--0.72,
--0.9,
--0.26,
-0.42,
-0.92,
-1.05,
-0.48 
-],
-[
- "15",
--1.07,
--0.18,
-0.03,
-1.04,
-0.97,
--1.02,
-1.21 
-],
-[
- "16",
--1.07,
--0.11,
--0.09,
-1.19,
-0.89,
--0.66,
-1.16 
-],
-[
- "17",
--1.05,
-0.09,
--0.11,
-1.38,
-0.91,
--0.78,
-1.24 
-],
-[
- "18",
--1,
-0.37,
-0.39,
-0.49,
-1.08,
--1.82,
-0.98 
-],
-[
- "19",
--1.04,
-0.65,
-0.6,
-0.22,
-1.47,
--2.65,
-0.7 
-],
-[
- "20",
--1.03,
-1.16,
-0.57,
-0.17,
-0.67,
--1.56,
--0.04 
-],
-[
- "21",
--0.7,
-1.01,
-0.44,
--0.39,
-0.59,
--0.52,
-1.09 
-],
-[
- "22",
--0.66,
-1.27,
-0.39,
-0.21,
-0.16,
-0.32,
--0.86 
-],
-[
- "23",
--0.6,
-1.16,
-0.39,
--0.5,
-0.05,
-0.9,
--1.07 
-],
-[
- "24",
--0.57,
-1.01,
--0.26,
-0.95,
--0.32,
-1.1,
-0.77 
-],
-[
- "25",
--0.4,
-0.75,
--0.22,
-0.61,
-0.29,
-1.83,
-0.04 
-],
-[
- "26",
--0.92,
-1.93,
+-1.08,
 -0.76,
-1.39,
--0.74,
-0.1,
--1.79 
-],
-[
- "27",
--0.51,
-1.19,
--0.32,
-0.83,
--0.42,
-1.09,
-0.44 
-],
-[
- "28",
--0.75,
-1.71,
--0.56,
-1.1,
--0.74,
-0.5,
--1.84 
-],
-[
- "29",
--0.49,
-1.39,
--0.04,
--0.87,
--0.33,
-0.38,
--1.53 
-],
-[
- "30",
--0.58,
-1.36,
--0.08,
-0.96,
--0.4,
-0.48,
+0.95,
 0.81 
 ],
 [
+ "13",
+-1.09,
+-0.89,
+1.12,
+1.44 
+],
+[
+ "14",
+-0.86,
+-0.58,
+0.62,
+0.93 
+],
+[
+ "15",
+-0.81,
+-0.18,
+-0.09,
+0.46 
+],
+[
+ "16",
+-0.87,
+-0.09,
+0.03,
+0.69 
+],
+[
+ "17",
+-0.81,
+0.08,
+0.02,
+0.75 
+],
+[
+ "18",
+-0.61,
+0.28,
+-0.37,
+-0.2 
+],
+[
+ "19",
+-0.5,
+0.48,
+-0.37,
+-0.59 
+],
+[
+ "20",
+-0.67,
+0.98,
+-0.41,
+-0.25 
+],
+[
+ "21",
+-0.54,
+1.12,
+-0.58,
+-0.43 
+],
+[
+ "22",
+-0.61,
+1.23,
+-0.02,
+0.56 
+],
+[
+ "23",
+-0.68,
+1.24,
+0.04,
+0.27 
+],
+[
+ "24",
+-0.67,
+1.08,
+-0.13,
+0.96 
+],
+[
+ "25",
+-0.61,
+1,
+0.47,
+1.3 
+],
+[
+ "26",
+-0.89,
+1.5,
+0.71,
+0.9 
+],
+[
+ "27",
+-0.62,
+1.22,
+-0.04,
+0.87 
+],
+[
+ "28",
+-0.79,
+1.37,
+0.62,
+0.94 
+],
+[
+ "29",
+-0.57,
+1.31,
+0.27,
+-0.43 
+],
+[
+ "30",
+-0.56,
+1.32,
+-0.41,
+0.71 
+],
+[
  "31",
--0.49,
-1.19,
--0.06,
-0.88,
--0.48,
-0.34,
--0.24 
+-0.46,
+1.04,
+-0.13,
+0.71 
 ],
 [
  "32",
--0.26,
-0.87,
-0.04,
-0.62,
--0.42,
-0.97,
-0.57 
+-0.34,
+0.93,
+-0.35,
+0.75 
 ],
 [
  "33",
--0.16,
-1.27,
--0.71,
-0.51,
--0.43,
-0.76,
-0.98 
+-0.28,
+1.31,
+0.08,
+0.25 
 ],
 [
  "34",
--0.2,
-1.7,
--0.22,
--0.83,
-0.1,
--0.39,
--0.17 
+-0.17,
+1.66,
+0.11,
+-0.89 
 ],
 [
  "35",
-0.12,
-1.34,
--0.41,
--1.17,
-0.15,
-0.81,
-1.41 
+-0.06,
+1.66,
+-0.05,
+-0.86 
 ],
 [
  "36",
-0.2,
-1.29,
--0.33,
--1.59,
-0.18,
-1.3,
--0.7 
+-0.09,
+1.55,
+0.62,
+-0.65 
 ],
 [
  "37",
-0.18,
-1.17,
--0.37,
--1.47,
-0.09,
-0.22,
--0.79 
+0.05,
+1.24,
+0.52,
+-1.07 
 ],
 [
  "38",
-0.27,
-0.77,
--0.39,
--1.4,
-0.09,
--0.06,
-1.24 
+0.17,
+0.97,
+-0.11,
+-1.42 
 ],
 [
  "39",
-0.43,
-0.14,
-0.35,
--1.9,
-0.38,
--0.18,
--0.56 
+0.39,
+0.28,
+0.03,
+-1.3 
 ],
 [
  "40",
-0.48,
-0.04,
-0.32,
--1.97,
-0.37,
--0.6,
-1.43 
+0.49,
+0.3,
+-0.63,
+-1.82 
 ],
 [
  "41",
-0.27,
-0.41,
-0.6,
--1.7,
--0.24,
--2.32,
--1.36 
+0.56,
+0.05,
+-0.48,
+-2.1 
 ],
 [
  "42",
 0.6,
-0.06,
-0.08,
--1.82,
--0.11,
--0.74,
-1.1 
+0.18,
+-0.57,
+-1.93 
 ],
 [
  "43",
-0.67,
--0.15,
--0.19,
--1.55,
-0.08,
--0.71,
-1.35 
+0.65,
+0,
+-0.32,
+-1.77 
 ],
 [
  "44",
-0.67,
-0.03,
--0.01,
--1.24,
-0,
--0.3,
--0.98 
+0.62,
+0.01,
+0.29,
+-1 
 ],
 [
  "45",
-0.83,
--0.25,
--0.37,
--1.34,
-0.35,
--0.42,
--0.53 
+0.75,
+-0.2,
+0.62,
+-1.21 
 ],
 [
  "46",
-0.86,
--0.34,
--0.96,
--1,
-0,
--0.2,
--0.91 
+0.7,
+-0.37,
+1.08,
+-1.06 
 ],
 [
  "47",
-1.19,
--0.76,
--1.43,
--0.92,
--0.02,
--0.14,
-0.33 
+0.96,
+-0.69,
+1.1,
+-1.28 
 ],
 [
  "48",
-1.2,
--0.76,
--2.12,
-0.34,
-0.24,
-0.52,
-0.59 
+0.88,
+-0.65,
+1.81,
+-0.18 
 ],
 [
  "49",
-1.34,
--1.03,
--2.26,
-1.01,
-0.26,
-0.06,
-0.51 
+1.1,
+-1.06,
+1.96,
+0.11 
 ],
 [
  "50",
-1.17,
--0.88,
--1.66,
-0.37,
-0.21,
--0.63,
--0.82 
+1.05,
+-1.07,
+1.76,
+-0.36 
 ] 
 ];
 data.addColumn('string','Observation');
@@ -5908,16 +5568,13 @@ data.addColumn('number','Derived Variable (Factor) 1');
 data.addColumn('number','Derived Variable (Factor) 2');
 data.addColumn('number','Derived Variable (Factor) 3');
 data.addColumn('number','Derived Variable (Factor) 4');
-data.addColumn('number','Derived Variable (Factor) 5');
-data.addColumn('number','Derived Variable (Factor) 6');
-data.addColumn('number','Derived Variable (Factor) 7');
 data.addRows(datajson);
 return(data);
 }
  
 // jsDrawChart
-function drawChartTableID16ac85850e3() {
-var data = gvisDataTableID16ac85850e3();
+function drawChartTableID1e6856415a8e() {
+var data = gvisDataTableID1e6856415a8e();
 var options = {};
 options["allowHtml"] = true;
 options["showRowNumber"] = true;
@@ -5927,7 +5584,7 @@ options["allowHTML"] = true;
 options["page"] = "disable";
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableID16ac85850e3')
+    document.getElementById('TableID1e6856415a8e')
     );
     chart.draw(data,options);
     
@@ -5951,9 +5608,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID16ac85850e3);
+callbacks.push(drawChartTableID1e6856415a8e);
 })();
-function displayChartTableID16ac85850e3() {
+function displayChartTableID1e6856415a8e() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -5977,11 +5634,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID16ac85850e3"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID1e6856415a8e"></script>
  
 <!-- divChart -->
   
-<div id="TableID16ac85850e3" 
+<div id="TableID1e6856415a8e" 
   style="width: 1220; height: 400;">
 </div>
 
@@ -5995,264 +5652,264 @@ callbacks.shift()();
 
 <!-- ScatterChart generated in R 3.1.2 by googleVis 0.5.8 package -->
 
-<!-- Wed Feb 18 02:24:49 2015 -->
+<!-- Thu Feb 19 13:06:45 2015 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataScatterChartID16ac24813700 () {
+function gvisDataScatterChartID1e6854332022 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
  [
- -0.82,
--1.08 
-],
-[
- -0.96,
--1 
-],
-[
- -0.81,
--1.21 
-],
-[
- -1.26,
--1.35 
-],
-[
- -1.42,
--1.4 
-],
-[
- -1.45,
+ -0.91,
 -1.44 
 ],
 [
- -1.29,
--1.58 
+ -0.98,
+-1.5 
 ],
 [
- -1.21,
--1.47 
+ -0.97,
+-1.49 
 ],
 [
  -1.1,
--1.48 
+-1.57 
 ],
 [
- -0.88,
--1.42 
+ -1.2,
+-1.65 
 ],
 [
- -0.83,
--1.26 
+ -1.23,
+-1.67 
 ],
 [
- -0.67,
--1.27 
+ -1.24,
+-1.56 
 ],
 [
- -0.77,
--1.46 
+ -1.16,
+-1.37 
 ],
 [
- -0.72,
--0.9 
+ -1.21,
+-1.29 
 ],
 [
- -1.07,
+ -1.17,
+-0.85 
+],
+[
+ -1.09,
+-0.72 
+],
+[
+ -1.08,
+-0.76 
+],
+[
+ -1.09,
+-0.89 
+],
+[
+ -0.86,
+-0.58 
+],
+[
+ -0.81,
 -0.18 
 ],
 [
- -1.07,
--0.11 
+ -0.87,
+-0.09 
 ],
 [
- -1.05,
-0.09 
+ -0.81,
+0.08 
 ],
 [
- -1,
-0.37 
+ -0.61,
+0.28 
 ],
 [
- -1.04,
-0.65 
+ -0.5,
+0.48 
 ],
 [
- -1.03,
-1.16 
+ -0.67,
+0.98 
 ],
 [
- -0.7,
-1.01 
+ -0.54,
+1.12 
 ],
 [
- -0.66,
-1.27 
+ -0.61,
+1.23 
 ],
 [
- -0.6,
-1.16 
+ -0.68,
+1.24 
+],
+[
+ -0.67,
+1.08 
+],
+[
+ -0.61,
+1 
+],
+[
+ -0.89,
+1.5 
+],
+[
+ -0.62,
+1.22 
+],
+[
+ -0.79,
+1.37 
 ],
 [
  -0.57,
-1.01 
+1.31 
 ],
 [
- -0.4,
-0.75 
+ -0.56,
+1.32 
 ],
 [
- -0.92,
-1.93 
+ -0.46,
+1.04 
 ],
 [
- -0.51,
-1.19 
+ -0.34,
+0.93 
 ],
 [
- -0.75,
-1.71 
+ -0.28,
+1.31 
 ],
 [
- -0.49,
-1.39 
+ -0.17,
+1.66 
 ],
 [
- -0.58,
-1.36 
+ -0.06,
+1.66 
 ],
 [
- -0.49,
-1.19 
+ -0.09,
+1.55 
 ],
 [
- -0.26,
-0.87 
+ 0.05,
+1.24 
 ],
 [
- -0.16,
-1.27 
+ 0.17,
+0.97 
 ],
 [
- -0.2,
-1.7 
+ 0.39,
+0.28 
 ],
 [
- 0.12,
-1.34 
+ 0.49,
+0.3 
 ],
 [
- 0.2,
-1.29 
-],
-[
- 0.18,
-1.17 
-],
-[
- 0.27,
-0.77 
-],
-[
- 0.43,
-0.14 
-],
-[
- 0.48,
-0.04 
-],
-[
- 0.27,
-0.41 
+ 0.56,
+0.05 
 ],
 [
  0.6,
-0.06 
+0.18 
 ],
 [
- 0.67,
--0.15 
+ 0.65,
+0 
 ],
 [
- 0.67,
-0.03 
+ 0.62,
+0.01 
 ],
 [
- 0.83,
--0.25 
+ 0.75,
+-0.2 
 ],
 [
- 0.86,
--0.34 
+ 0.7,
+-0.37 
 ],
 [
- 1.19,
--0.76 
-],
-[
- 1.2,
--0.76 
-],
-[
- 1.34,
--1.03 
-],
-[
- 1.17,
--0.88 
-],
-[
- 1.28,
--0.78 
-],
-[
- 1.27,
--0.04 
-],
-[
- 1.55,
--0.16 
-],
-[
- 1.21,
-0.29 
-],
-[
- 1.14,
--0.28 
-],
-[
- 1.22,
--0.31 
-],
-[
- 1.31,
--0.39 
-],
-[
- 1.59,
+ 0.96,
 -0.69 
 ],
 [
- 1.61,
--0.27 
+ 0.88,
+-0.65 
 ],
 [
- 1.73,
--0.17 
+ 1.1,
+-1.06 
 ],
 [
- 1.76,
-0.09 
+ 1.05,
+-1.07 
 ],
 [
- 1.6,
-0.14 
+ 1.15,
+-1.12 
+],
+[
+ 1.23,
+-0.5 
+],
+[
+ 1.46,
+-0.45 
+],
+[
+ 1.3,
+0.08 
+],
+[
+ 1.41,
+-0.45 
+],
+[
+ 1.47,
+-0.44 
+],
+[
+ 1.53,
+-0.56 
+],
+[
+ 1.71,
+-0.65 
+],
+[
+ 1.71,
+-0.11 
+],
+[
+ 1.77,
+-0.05 
+],
+[
+ 1.93,
+0.28 
+],
+[
+ 1.82,
+0.23 
 ] 
 ];
 data.addColumn('number','V1');
@@ -6262,8 +5919,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartScatterChartID16ac24813700() {
-var data = gvisDataScatterChartID16ac24813700();
+function drawChartScatterChartID1e6854332022() {
+var data = gvisDataScatterChartID1e6854332022();
 var options = {};
 options["allowHtml"] = true;
 options["legend"] = "none";
@@ -6277,7 +5934,7 @@ options["width"] =    900;
 options["height"] =    800;
 
     var chart = new google.visualization.ScatterChart(
-    document.getElementById('ScatterChartID16ac24813700')
+    document.getElementById('ScatterChartID1e6854332022')
     );
     chart.draw(data,options);
     
@@ -6301,9 +5958,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartScatterChartID16ac24813700);
+callbacks.push(drawChartScatterChartID1e6854332022);
 })();
-function displayChartScatterChartID16ac24813700() {
+function displayChartScatterChartID1e6854332022() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -6329,12 +5986,12 @@ callbacks.shift()();
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartScatterChartID16ac24813700"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartScatterChartID1e6854332022"></script>
  
 
 <!-- divChart -->
 
-<div id="ScatterChartID16ac24813700" 
+<div id="ScatterChartID1e6854332022" 
   style="width: 900; height: 800;">
 </div>
 

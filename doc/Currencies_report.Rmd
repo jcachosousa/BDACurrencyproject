@@ -5,19 +5,17 @@
 Currencies: Factor Analysis
 ========================================================
 
-**Team names**
+**Pedro G, Felipe P, Jan S and Jorge C**
 
 
 Business Decisions
 ---------------------------------------------------------
-your text...
+Assuming I am a Global Potfolio Manager and have limited currency forwards available to hedge my portfolio, with the decomposition of principal components in currency price changes agaist USD I want to group countries in a way that my global portfolio could be more efficiently hedged with few currencies (around 4 in the example below). 
 
 
 The Data
 --------------------------------------------------------------
-
-
-your text...
+We got from Bloomberg currency data for all the mjor currencies in the world against the USD in the last 30 days (short term)
 
 ```{r echo=FALSE, message=FALSE, prompt=FALSE, results='asis'}
 # let's make the data into data.matrix classes so that we can easier visualize them
@@ -48,14 +46,16 @@ print(m1,'chart')
 
 Our Approach
 ---------------------------------------------------
+We did the 6 step analysis as suggested by the course
+
 
 #### Factor Analysis in 6 steps
 
-1. Confirm the data in metric 
+1. Confirm the data is metric
 
 2. Decide whether to scale or standardize the data
 
-3. Check the correlation matrix to see if Factor Analysis makes sense
+3. Check the correlation matrix to see if Factor Analysis makes sense: apparently it does makes sense as the countries with highest eigenvalues in each factor are relatively different amongst each other
 
 4. Develop a scree plot and decide on the number of factors to be derived
 
@@ -87,7 +87,7 @@ print(m1,'chart')
 #### Step 2: Decide whether to scale or standardize the data
 
 
-your text...
+we used prices instead of returns 
 
 ```{r, results='asis'}
 ProjectDatafactor_scaled=apply(ProjectDataFactor,2, function(r) {if (sd(r)!=0) res=(r-mean(r))/sd(r) else res=0*r; res})
@@ -122,7 +122,7 @@ As expected all variables have mean 0 and standard deviation 1.
 
 #### Step 3:  Check correlation matrix to see if Factor Analysis makes sense
 
-your text...
+we decided to use the spot prices that are more sensitive to daily changes
 
 This is the correlation matrix of the `r length(factor_attributes_used)` original variable we use for factor analysis (Note: this would be the same for the standardized ones if the standardization is done as above; there is a mathematical reason for this that we will not explore - you could confirm it yourself):
 
@@ -135,11 +135,11 @@ rownames(thecor)<-colnames(ProjectDataFactor)
 cat(renderHeatmapX(thecor, border=1))
 ```
 
-your text...
+Apparently the factors are independent and can have jointly a good explanation power.
 
 #### Step 4. Develop a scree plot and decide on the number of factors to be derived
 
-your text...
+we assumed 4 currencies is a reasonable assumption for portfolio hedging
 
 <br>
 
@@ -243,7 +243,7 @@ print(m1,'chart')
 
 How would you interpret the selected factors?
 
-YOUR TEXT: INTERPRETATIONS AND ARGUMENTS FOR YOUR CHOICES..
+Canada, Israel, India and Qatar have very different characteristics. Probably these economies have links with countries around them that allow for very different currency fluctuations compared to the USD.
 
 #### Step 6. Save factor scores for subsequent analyses
 
