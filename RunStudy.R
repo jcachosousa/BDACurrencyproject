@@ -46,7 +46,7 @@ minimum_variance_explained = 65  # between 1 and 100
 
 # Please ENTER the number of factors to use 
 # (ONLY USED in case "manual" is the factor selection criterion used).
-manual_numb_factors_used = 7
+manual_numb_factors_used = 4
 
 # Please ENTER the rotation eventually used (e.g. "none", "varimax", "quatimax", "promax", "oblimin", "simplimax", and "cluster" - see help(principal)). Defauls is "varimax"
 rotation_used="varimax"
