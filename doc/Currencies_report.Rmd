@@ -15,7 +15,7 @@ Assuming I am a Global Potfolio Manager and have limited currency forwards avail
 
 The Data
 --------------------------------------------------------------
-We got from Bloomberg currency data for all the mjor currencies in the world against the USD in the last 30 days (short term)
+We got from Bloomberg currency data for all the major currencies in the world against the USD in the last 30 days (short term)
 
 ```{r echo=FALSE, message=FALSE, prompt=FALSE, results='asis'}
 # let's make the data into data.matrix classes so that we can easier visualize them
@@ -46,7 +46,7 @@ print(m1,'chart')
 
 Our Approach
 ---------------------------------------------------
-We did the 6 step analysis as suggested by the course
+We did the following 6 step analysis, as suggested by the course:
 
 
 #### Factor Analysis in 6 steps
@@ -87,7 +87,7 @@ print(m1,'chart')
 #### Step 2: Decide whether to scale or standardize the data
 
 
-we used prices instead of returns 
+We decided to use prices instead of returns 
 
 ```{r, results='asis'}
 ProjectDatafactor_scaled=apply(ProjectDataFactor,2, function(r) {if (sd(r)!=0) res=(r-mean(r))/sd(r) else res=0*r; res})
@@ -122,9 +122,9 @@ As expected all variables have mean 0 and standard deviation 1.
 
 #### Step 3:  Check correlation matrix to see if Factor Analysis makes sense
 
-we decided to use the spot prices that are more sensitive to daily changes
+We decided to use the spot prices that are more sensitive to daily changes.
 
-This is the correlation matrix of the `r length(factor_attributes_used)` original variable we use for factor analysis (Note: this would be the same for the standardized ones if the standardization is done as above; there is a mathematical reason for this that we will not explore - you could confirm it yourself):
+This is the correlation matrix of the `r length(factor_attributes_used)` original variable we used for factor analysis (Note: this would be the same for the standardized ones if the standardization is done as above; there is a mathematical reason for this that we will not explore - you could confirm it yourself):
 
 ```{r echo=FALSE, comment=NA, warning=FALSE, message=FALSE, results='asis'}
 thecor = round(cor(ProjectDataFactor),2)
@@ -139,7 +139,7 @@ Apparently the factors are independent and can have jointly a good explanation p
 
 #### Step 4. Develop a scree plot and decide on the number of factors to be derived
 
-we assumed 4 currencies is a reasonable assumption for portfolio hedging
+We assumed that 4 currency factors is a reasonable assumption for portfolio hedging
 
 <br>
 
@@ -167,7 +167,7 @@ print(m,'chart')
 ```
 <br> <br>
 
-your text...
+The scree plot below was used to visualize the data and help determine the number of relevant factors.
 
 
 ```{r Fig1, echo=FALSE, comment=NA, results='asis', message=FALSE, fig.align='center', fig=TRUE}
